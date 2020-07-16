@@ -1,5 +1,7 @@
 package offer;
 
+import java.util.Arrays;
+
 /**
  * @author Li-Xiaoxu
  * @version 1.0
@@ -8,6 +10,17 @@ package offer;
  */
 public class Problem17 {
     public static void main(String[] args) {
+        Problem17 problem17 = new Problem17();
+        System.out.println(Arrays.toString(problem17.printNumbers(2)));
 
+    }
+
+    public int[] printNumbers(int n) {
+        int max = (int) Math.pow(10,n);
+        int[] result = new int[max - 1];
+        for(int i = 0; i < max - 1; i++){
+            result[i] = i+1;
+        }
+        return result;
     }
 }
